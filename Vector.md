@@ -116,23 +116,24 @@ std::vector<Point> v;  // Vector of custom objects
 
 ### 📚 **15 Important Methods for `vector`**
 
-| Method            | Description                                                                     | Syntax                 | Example Usage                  | Time Complexity |
-| ----------------- | ------------------------------------------------------------------------------- | ---------------------- | ------------------------------ | --------------- |
-| `push_back()`     | Adds an element to the end of the vector                                        | `v.push_back(x);`      | `v.push_back(10);`             | Amortized O(1)  |
-| `pop_back()`      | Removes the last element                                                        | `v.pop_back();`        | `v.pop_back();`                | O(1)            |
-| `size()`          | Returns the number of elements in the vector                                    | `v.size();`            | `v.size();`                    | O(1)            |
-| `capacity()`      | Returns the number of elements the vector can hold                              | `v.capacity();`        | `v.capacity();`                | O(1)            |
-| `resize()`        | Resizes the vector to the given size                                            | `v.resize(n);`         | `v.resize(5);`                 | O(n)            |
-| `clear()`         | Removes all elements from the vector                                            | `v.clear();`           | `v.clear();`                   | O(n)            |
-| `front()`         | Returns a reference to the first element                                        | `v.front();`           | `v.front();`                   | O(1)            |
-| `back()`          | Returns a reference to the last element                                         | `v.back();`            | `v.back();`                    | O(1)            |
-| `at()`            | Accesses an element with bounds checking                                        | `v.at(i);`             | `v.at(2);`                     | O(1)            |
-| `empty()`         | Checks if the vector is empty                                                   | `v.empty();`           | `v.empty();`                   | O(1)            |
-| `insert()`        | Inserts an element at a specified position                                      | `v.insert(pos, val);`  | `v.insert(v.begin() + 2, 10);` | O(n)            |
-| `erase()`         | Removes an element at a specified position                                      | `v.erase(pos);`        | `v.erase(v.begin() + 1);`      | O(n)            |
-| `emplace_back()`  | Adds a new element to the end of the vector (more efficient than `push_back()`) | `v.emplace_back(val);` | `v.emplace_back(20);`          | Amortized O(1)  |
-| `swap()`          | Swaps the contents of two vectors                                               | `v1.swap(v2);`         | `v1.swap(v2);`                 | O(1)            |
-| `shrink_to_fit()` | Requests the reduction of capacity to fit the size                              | `v.shrink_to_fit();`   | `v.shrink_to_fit();`           | O(n)            |
+| Method            | Description                                                                     | Syntax                 | Example Usage                  | Output                      | Time Complexity |
+| ----------------- | ------------------------------------------------------------------------------- | ---------------------- | ------------------------------ | --------------------------- | --------------- |
+| `push_back()`     | Adds an element to the end of the vector                                        | `v.push_back(x);`      | `v.push_back(10);`             | No output (modifies vector) | Amortized O(1)  |
+| `pop_back()`      | Removes the last element                                                        | `v.pop_back();`        | `v.pop_back();`                | No output (modifies vector) | O(1)            |
+| `size()`          | Returns the number of elements in the vector                                    | `v.size();`            | `v.size();`                    | `5`                         | O(1)            |
+| `capacity()`      | Returns the number of elements the vector can hold                              | `v.capacity();`        | `v.capacity();`                | `8`                         | O(1)            |
+| `resize()`        | Resizes the vector to the given size                                            | `v.resize(n);`         | `v.resize(5);`                 | No output (modifies vector) | O(n)            |
+| `clear()`         | Removes all elements from the vector                                            | `v.clear();`           | `v.clear();`                   | No output (modifies vector) | O(n)            |
+| `front()`         | Returns a reference to the first element                                        | `v.front();`           | `v.front();`                   | `1`                         | O(1)            |
+| `back()`          | Returns a reference to the last element                                         | `v.back();`            | `v.back();`                    | `4`                         | O(1)            |
+| `at()`            | Accesses an element with bounds checking                                        | `v.at(i);`             | `v.at(2);`                     | `3`                         | O(1)            |
+| `empty()`         | Checks if the vector is empty                                                   | `v.empty();`           | `v.empty();`                   | `false`                     | O(1)            |
+| `insert()`        | Inserts an element at a specified position                                      | `v.insert(pos, val);`  | `v.insert(v.begin() + 2, 10);` | No output (modifies vector) | O(n)            |
+| `erase()`         | Removes an element at a specified position                                      | `v.erase(pos);`        | `v.erase(v.begin() + 1);`      | No output (modifies vector) | O(n)            |
+| `emplace_back()`  | Adds a new element to the end of the vector (more efficient than `push_back()`) | `v.emplace_back(val);` | `v.emplace_back(20);`          | No output (modifies vector) | Amortized O(1)  |
+| `swap()`          | Swaps the contents of two vectors                                               | `v1.swap(v2);`         | `v1.swap(v2);`                 | No output (modifies vector) | O(1)            |
+| `shrink_to_fit()` | Requests the reduction of capacity to fit the size                              | `v.shrink_to_fit();`   | `v.shrink_to_fit();`           | No output (modifies vector) | O(n)            |
+
 
 ---
 
